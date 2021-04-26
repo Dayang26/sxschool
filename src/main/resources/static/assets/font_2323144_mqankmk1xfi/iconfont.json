@@ -1,0 +1,37 @@
+{
+  "id": "2323144",
+  "name": "sxzjjt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8655940",
+      "name": "章程",
+      "font_class": "zhangcheng",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "14559693",
+      "name": "荣誉",
+      "font_class": "rongyu",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "11649634",
+      "name": "组织机构",
+      "font_class": "zuzhijigou",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "11669134",
+      "name": "领导视察",
+      "font_class": "weixianzuoye",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    }
+  ]
+}
