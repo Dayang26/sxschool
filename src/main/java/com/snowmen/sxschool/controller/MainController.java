@@ -12,13 +12,26 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller()
 public class MainController {
 
+    /**
+     * 网站首页
+     * @return
+     */
     @RequestMapping("/")
     public String index() {
         return "index";
     }
 
+    /**
+     * 集团概况
+     * @return
+     */
     @RequestMapping("/about")
     public String about(){
         return "about";
+    }
+
+    @RequestMapping("/department")
+    public String department(){
+        return "department";
     }
 }
