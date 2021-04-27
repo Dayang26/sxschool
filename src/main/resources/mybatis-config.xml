@@ -2,22 +2,15 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
-    <!--加载外部properties资源文件,通过${}表达式根据key获取值-->
-    <properties resource="jdbc.properties"></properties>
 
+
+<configuration>
     <settings>
         <!--标准输出（standard output）日志-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
         <!--开启驼峰命名映射-->
         <setting name="mapUnderscoreToCamelCase" value="true"></setting>
     </settings>
-
-    <!--只针对于实体类,进行包扫描配置别名，别名即类名，忽略大小写  Aliases别名-->
-    <typeAliases>
-        <package name="com.javasm"></package>
-    </typeAliases>
-
 
 
     <!--数据库环境配置-->
@@ -30,12 +23,11 @@
             <!--POOLED 有取出，有放回-->
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/sxschool?useSSL=true&amp;userUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/sxschool?useSSL=true&amp;userUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8&amp;autoReconnect=true&amp;failOverReadOnly=false
                 "/>
-                jdbc:mysql://localhost:3306
-                sxschool?characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&failOverReadOnly=false
-                <property name="username" value="${jdbc.username}"/>
-                <property name="password" value="${jdbc.password}"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
             </dataSource>
         </environment>
     </environments>
@@ -43,7 +35,6 @@
     <!--映射文件:统一写sql语句-->
     <mappers>
         <!--把映射文件包含进来-->
-        <mapper resource="com\javasm\sys\mapper\blog-mapper.xml"></mapper>
-        <mapper resource="com\javasm\sys\mapper2\blog-mapper2.xml"></mapper>
+        <mapper resource="com/snowmen/sxschool/dao/UserMapper.xml"></mapper>
     </mappers>
 </configuration>
